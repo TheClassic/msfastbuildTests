@@ -250,3 +250,8 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# FastBuild files
+*.bff
+*.fdb
+fb.bat
