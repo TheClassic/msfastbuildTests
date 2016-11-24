@@ -5,6 +5,7 @@ ObjectList('dependent_Action_0')
 	.Compiler = 'msvc'
 	.CompilerOutputPath = "Debug\"
 	.CompilerInputFiles = { 'dependent.cpp' }
+	.CompilerInputFilesRoot = "d:/ClearCaseStorage/msfastbuildTests/projectReferences/dependent/"
 	.CompilerOptions = '"%1" /Fo"%2" /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D DEPENDENT_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fp"Debug\dependent.pch" /Fd"Debug\vc120.pdb" /Gd /analyze- /errorReport:queue  /FS /TP'
 }
 
