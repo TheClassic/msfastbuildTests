@@ -1,0 +1,61 @@
+;d:\ClearCaseStorage\msfastbuildTests\projectReferences\independent\independent.vcxproj_Win32_Debug_70b8382f36b35a28b19258e75e37f8ed
+
+.VSBasePath = 'C:\Program Files (x86)\Microsoft Visual Studio 12.0\'
+.VCBasePath = 'C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\'
+.WindowsSDKBasePath = 'C:\Program Files (x86)\Windows Kits\8.1\'
+
+Settings
+{
+	.Environment = 
+	{
+		"INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\include;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;",
+		"LIB=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86;;",
+		"LIBPATH=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\atlmfc\lib;C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\lib;",
+		"PATH=c:\WINDOWS\Microsoft.NET\Framework\v4.0.30319;c:\Executables\fastbuild;C:\Program Files (x86)\WiX Toolset v3.10\bin;C:\Program Files\avs\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\mpirt;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32_win\compiler;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\REDIST\INTEL64\MPIRT;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\REDIST\INTEL64\COMPILER;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\REDIST\IA32\MPIRT;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\REDIST\IA32\COMPILER;C:\RUBY\LIB\GTK\BIN;D:\CLEARCASESTORAGE\GITBLIT\GITTY\MASTER;C:\WINDOWS\SYSTEM32;C:\Program Files (x86)\Intel\ComposerXE-2011\redist\\INTEL64\MPIRT;C:\Program Files (x86)\Intel\ComposerXE-2011\redist\\INTEL64\COMPILER;C:\Program Files (x86)\Intel\ComposerXE-2011\redist\\IA32\MPIRT;C:\Program Files (x86)\Intel\ComposerXE-2011\redist\\IA32\COMPILER;C:\PROGRAM FILES (X86)\INTEL\COMPOSERXE-2011\COMPILER\LIB;C:\PROGRAM FILES (X86)\CALIBRE2\;C:\PROGRAM FILES\COLLABORATOR CLIENT;C:\PROGRAM FILES (X86)\WINDOWS KITS\8.1\WINDOWS PERFORMANCE TOOLKIT\;C:\EXECUTABLES\APACHE-MAVEN-3.2.3\BIN;C:\PROGRAM FILES (X86)\CMAKE\BIN;C:\GO\BIN;C:\PYTHON35;C:\PYTHON35\SCRIPTS;C:\Executables\swigwin-3.0.5;C:\USERS\ASASAK\APPDATA\LOCAL\PROGRAMS\GIT\BIN;C:\PROGRAM FILES\TORTOISESVN\BIN;C:\STRAWBERRY\C\BIN;C:\STRAWBERRY\PERL\SITE\BIN;C:\STRAWBERRY\PERL\BIN;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\GitExtensions\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Git LFS;C:\Program Files (x86)\Skype\Phone\;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\EndgameFramework\bin\tools;D:\EndgameFramework4.77\bin\tools;c:\MiKTeX\miktex\bin\;C:\Users\asasak\AppData\Local\Programs\Git\cmd"
+		"TMP=C:\Users\asasak\AppData\Local\Temp"
+		"TEMP=C:\Users\asasak\AppData\Local\Temp"
+		"SystemRoot=C:\Windows"
+	}
+}
+
+Compiler('msvc')
+{
+	.Root = '$VSBasePath$/VC/bin'
+	.Executable = '$Root$/cl.exe'
+	.ExtraFiles =
+	{
+		'$Root$/c1.dll'
+		'$Root$/c1xx.dll'
+		'$Root$/c2.dll'
+		'$Root$/1033/clui.dll'
+		'$Root$/mspdbsrv.exe'
+		'$Root$/mspdbcore.dll'
+		'$Root$/mspft120.dll'
+		'$Root$/msobj120.dll'
+		'$Root$/mspdb120.dll'
+		'$VSBasePath$/VC/redist/x86/Microsoft.VC120.CRT/msvcp120.dll'
+		'$VSBasePath$/VC/redist/x86/Microsoft.VC120.CRT/vccorlib120.dll'
+	}
+}
+
+Compiler('rc') { .Executable = '$WindowsSDKBasePath$\bin\x64\rc.exe' }
+
+ObjectList('Action_0')
+{
+	.Compiler = 'msvc'
+	.CompilerOutputPath = "Debug\"
+	.CompilerInputFiles = { 'independent.cpp' }
+	.CompilerOptions = '"%1" /Fo"%2" /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D INDEPENDENT_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fp"Debug\independent.pch" /Fd"Debug\vc120.pdb" /Gd /analyze- /errorReport:queue  /FS /TP'
+}
+
+DLL('output')
+{	.Linker = '$VSBasePath$\VC\bin\link.exe'
+	.LinkerOptions = '"%1" /OUT:"%2" /ERRORREPORT:QUEUE /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ManifestFile:"Debug\independent.dll.intermediate.manifest" /MANIFESTUAC:"level=^'asInvoker^' uiAccess=^'false^'" /DEBUG /PDB:"d:/ClearCaseStorage/msfastbuildTests/Debug\independent.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"d:/ClearCaseStorage/msfastbuildTests/Debug\independent.lib" /MACHINE:X86 /DLL'
+	.LinkerOutput = 'd:/ClearCaseStorage/msfastbuildTests/Debug/independent.dll'
+	.Libraries = { 'Action_0' }
+}
+
+Alias ('all')
+{
+	.Targets = { 'output' }
+} 
