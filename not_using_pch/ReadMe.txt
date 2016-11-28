@@ -1,0 +1,1 @@
+This demonstrates a case that msfastbuild failed to handle properly, where one file in the project did not use the precompiled headers, while the project in general created and used precompiled headers.
