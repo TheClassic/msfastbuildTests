@@ -40,13 +40,12 @@ Compiler('msvc')
 
 Compiler('rc') { .Executable = '$WindowsSDKBasePath$\bin\x64\rc.exe' }
 
-.rootDir = 'd:\ClearCaseStorage\msfastbuildTests\projectReferences\independent'
-
 ObjectList('Action_0')
 {
 	.Compiler = 'msvc'
 	.CompilerOutputPath = "Debug\"
-	.CompilerInputFiles = { '$rootDir$\independent.cpp' }
+	.CompilerInputFiles = { 'independent.cpp' }
+	.CompilerInputFilesRoot = 'd:\ClearCaseStorage\msfastbuildTests\projectReferences\independent\'
 	.CompilerOptions = '"%1" /Fo"%2" /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D INDEPENDENT_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Fp"Debug\independent.pch" /Fd"Debug\vc120.pdb" /Gd /analyze- /errorReport:queue  /FS /TP'
 }
 
